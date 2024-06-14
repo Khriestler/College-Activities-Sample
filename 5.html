@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: wheat;  
+        }
+
+        .container{
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 100px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+        }
+        button{
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form">
+            <h1>FIND TRIANGLE TYPE</h1>
+            <input type="text" name="num" id="side1" placeholder="Input a Number">
+            <br>
+            <input type="text" name="num" id="side2" placeholder="Input a Number">
+            <br>
+            <input type="text" name="num" id="side3" placeholder="Input a Number">
+            <br><br>
+            <input type="button" onclick="findtriangetype()" id="btnEnter" value="Enter">
+        </div>
+    </div>
+
+    <script>
+        function findtriangetype(){
+    var side1= document.getElementById("side1").value
+    var side2= document.getElementById("side2").value
+    var side3= document.getElementById("side3").value
+
+    if ((side1 == side2) && (side1 == side3)){
+        console.log("Equilateral Triangle");
+    }
+    else if((side1 == side2) || (side2 == side3)||(side1 == side3)){
+        console.log("Isoceles Triangle");
+    }
+    else{
+        console.log("Scalene Triangle");
+    }
+}
+    </script>
+
+<button><a href="6.html"> Next  </a></button>
+    
+</body>
+</html>

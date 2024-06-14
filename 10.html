@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: wheat;  
+        }
+
+        .container{
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 100px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+        }
+        button{
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form">
+            <h1>Days in Month</h1><br>
+            <input type="number" name="month" id="month" placeholder="Input Month"><br>
+            <input type="number" name="year" id="year" placeholder="Input Year"><br><br>
+            <input type="button" onclick="findDaysInMonth()" id="btnEnter" value="Enter">
+        </div>  
+    </div>
+
+    <script>
+    function isLeapYear(year){
+        return (((year%4 == 0) && (year%100 != 0)) || (year%400 == 0));
+    }
+
+    function findDaysInMonth(){
+        var month = document.getElementById("month").value
+        var year = document.getElementById("year").value
+
+        if(month < 1 || month > 12){
+            console.log(`Invalid Month of value ${month}`);
+            return;
+        }
+        if(month == 2){
+            if(isLeapYear(year)){
+                console.log(`The Month has 29 days`);
+            }
+            else{
+                console.log(`The Month has 28 days`);    
+            }
+        }
+        else if(month == 4 || month == 6 || month == 9 || month == 11){
+            console.log(`The Month has 30 days`);
+        }
+        else{
+            console.log(`The Month has 31 days`);
+        }
+    }   
+    </script>
+    
+</body>
+</html>

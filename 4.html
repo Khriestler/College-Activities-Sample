@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: wheat;  
+        }
+
+        .container{
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 100px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+        }
+        button{
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form">
+            <h1>FIND THE LARGEST NUMBER</h1><br>
+            <input type="text" name="num" id="num1" placeholder="Input a Number">
+            <br>
+            <input type="text" name="num" id="num2" placeholder="Input a Number">
+            <br>
+            <input type="text" name="num" id="num3" placeholder="Input a Number">
+            <br><br>
+            <input type="button" onclick="findLargestnum()" id="btnEnter" value="Enter">
+        </div>
+    </div>
+
+    <script>
+        function findLargestnum(){
+    const num1= document.getElementById("num1").value
+    const num2= document.getElementById("num2").value
+    const num3= document.getElementById("num3").value
+
+    if (num1 > num2 && num1 > num3){
+        console.log(`${num1} is the Largest Number`);
+    }
+    else if(num2 > num3){
+        console.log(`${num2} is the Largest Number`);
+    }
+    else{
+        console.log(`${num3} is the Largest Number`);
+    }
+}
+    </script>
+    
+    <button><a href="5.html"> Next  </a></button>
+    
+</body>
+</html>

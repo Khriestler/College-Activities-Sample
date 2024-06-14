@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: wheat;  
+        }
+
+        .container{
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 100px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+        }
+        button{
+            align-items: center;
+            padding: 10px;
+            margin: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form">
+            <h1> Grade Input Marks</h1><br>
+            Name: <input type="text" name="name" id="name" placeholder="Input Name"><br>
+            Marks: <input type="number" name="num" id="marks" placeholder="Input your Marks"><br><br>
+            <input type="button" onclick="findGrade()" id="btnEnter" value="Enter">
+        </div>  
+    </div>
+
+    <script>
+    function findGrade(name, marks){
+    var name = document.getElementById("name").value
+    var marks = document.getElementById("marks").value
+
+    if(marks >= 90 && marks <= 100){
+        console.log(`${name} you have received S grade`);
+    }
+    else if(marks >= 80 && marks <= 90){
+        console.log(`${name} you have received A grade`);
+    }
+    else if(marks >= 70 && marks <= 80){
+        console.log(`${name} you have received B grade`);
+    }
+    else if(marks >= 60 && marks <= 70){
+        console.log(`${name} you have received C grade`);
+    }
+    else if(marks >= 50 && marks <= 60){
+        console.log(`${name} you have received D grade`);
+    }
+    else if(marks >= 40 && marks <= 50){
+        console.log(`${name} you have received E grade`);
+    }
+    else if(marks >= 0 && marks <= 40){
+        console.log(`${name} you have Failed`);
+    }
+    else{
+        console.log(`Invalid marks of ${marks}`);
+    }
+    }
+    </script>
+
+<button><a href="10.html"> Next  </a></button>
+    
+</body>
+</html>
